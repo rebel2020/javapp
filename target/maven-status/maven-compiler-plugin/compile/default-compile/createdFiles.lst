@@ -1,3 +1,4 @@
+com/thrillio/controllers/LoginController.class
 com/thrillio/dao/BookmarkDao.class
 com/thrillio/entities/User.class
 com/thrillio/controllers/BookmarkController.class
@@ -8,6 +9,14 @@ com/thrillio/constants/KidFriendlyStatus.class
 com/thrillio/constants/MovieGenre.class
 com/thrillio/entities/Bookmark.class
 com/thrillio/constants/Usertype.class
+com/thrillio/managers/UserManager.class
+com/thrillio/utils/IOUtil.class
+com/thrillio/constants/BookGenre.class
 com/thrillio/constants/Gender.class
+com/thrillio/managers/BookmarkManager.class
+com/thrillio/utils/HttpConnect.class
+com/thrillio/graphql/GraphQLProvider.class
+com/thrillio/entities/Movie.class
+com/thrillio/entities/Book.class
 com/thrillio/dao/UserDao.class
 com/thrillio/entities/UserBookmark.class
