@@ -1,0 +1,13 @@
+com/thrillio/dao/BookmarkDao.class
+com/thrillio/entities/User.class
+com/thrillio/controllers/BookmarkController.class
+com/thrillio/partners/Sharable.class
+com/thrillio/entities/Weblink.class
+com/thrillio/entities/Weblink$DownloadStatus.class
+com/thrillio/constants/KidFriendlyStatus.class
+com/thrillio/constants/MovieGenre.class
+com/thrillio/entities/Bookmark.class
+com/thrillio/constants/Usertype.class
+com/thrillio/constants/Gender.class
+com/thrillio/dao/UserDao.class
+com/thrillio/entities/UserBookmark.class
