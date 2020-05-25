@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.thrillio.DataStore;
 import com.thrillio.constants.BookGenre;
 import com.thrillio.entities.Book;
 import com.thrillio.entities.Bookmark;
@@ -20,9 +19,6 @@ import com.thrillio.entities.Weblink;
 import com.thrillio.managers.BookmarkManager;
 
 public class BookmarkDao {
-	public List<List<Bookmark>> getBookmarks() {
-		return DataStore.getBookmarks();
-	}
 
 	public void saveUserBookmark(UserBookmark userBookmark) {
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?useSSL=false",
@@ -38,7 +34,6 @@ public class BookmarkDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		DataStore.add(userBookmark);
 	}
 
 	private void saveUserMovie(UserBookmark userBookmark, Statement smt) {
@@ -72,26 +67,6 @@ public class BookmarkDao {
 		}
 	}
 
-	public List<Weblink> getAllWeblinks() {
-		List<Weblink> result = new ArrayList<>();
-		List<List<Bookmark>> allBookmarks = DataStore.getBookmarks();
-		List<Bookmark> weblinks = allBookmarks.get(0);
-		for (Bookmark weblink : weblinks) {
-			result.add((Weblink) weblink);
-		}
-		return result;
-	}
-
-	public List<Weblink> getWeblniks(Weblink.DownloadStatus downloadStatus) {
-		List<Weblink> allWeblinks = getAllWeblinks();
-		List<Weblink> result = new ArrayList<>();
-		for (Weblink weblink : allWeblinks) {
-			if (weblink.getDownloadStatus() == downloadStatus) {
-				result.add(weblink);
-			}
-		}
-		return result;
-	}
 
 	public static void setIsKidFriendlyStatus(Bookmark bookmark) {
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?useSSL=false",

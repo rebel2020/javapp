@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
-import com.thrillio.DataStore;
 import com.thrillio.constants.Gender;
 import com.thrillio.constants.Usertype;
 import com.thrillio.entities.User;
@@ -16,7 +16,7 @@ import com.thrillio.managers.UserManager;
 
 public class UserDao {
 	public List<User> getUsers() {
-		return DataStore.getUsers();
+		return new ArrayList<User>();
 	}
 
 	public User getUser(int userId) {

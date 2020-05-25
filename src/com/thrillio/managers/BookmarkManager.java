@@ -64,9 +64,6 @@ public class BookmarkManager {
 		return weblink;
 	}
 
-	public List<List<Bookmark>> getBookmarks() {
-		return dao.getBookmarks();
-	}
 
 	public void saveUserBookmark(User user, Bookmark bookmark) {
 		UserBookmark userBookmark = new UserBookmark();
@@ -113,7 +110,6 @@ public class BookmarkManager {
 
 	public Collection<Bookmark> getBooks(boolean isBookmarked, long id) {
 		return dao.getBooks(isBookmarked,id);
-		
 	}
 
 	public Bookmark getBook(long bid) {
